@@ -1,0 +1,498 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans";
+  background: url(http://localhost:3000/assets/header.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+  backdrop-filter: blur(1em);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #282c34;
+  overflow-x: hidden;
+}
+
+input,
+textarea,
+button,
+select {
+  outline: none;
+  border: none;
+  font-weight: 400;
+  font-family: "Josefin Sans";
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  width: 200px;
+  height: 150px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+
+a {
+  display: block;
+}
+
+.app {
+  background-color: #282c34;
+  color: #fff;
+}
+
+.register {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  gap: 0.5em;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  font-family: "Josefin Sans";
+  background: #131324;
+}
+.register__form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  gap: 1.2em;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.462745098);
+  padding: 3em 4em;
+  width: 26em;
+  border-radius: 2em;
+}
+.register__div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 0.3em;
+  align-content: center;
+}
+.register__img {
+  height: 5em;
+  width: 5.5em;
+}
+.register__h1 {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+.register__input {
+  background: transparent;
+  padding: 1em;
+  border: 0.1em solid #4e0eff;
+  border-radius: 0.4em;
+  color: #fff;
+  width: 100%;
+  font-size: 1em;
+}
+.register__input:focus {
+  border: 0.1em solid #997af0;
+  outline: none;
+}
+.register__input::placeholder {
+  color: #fff;
+}
+.register__button {
+  background: #997af0;
+  color: #fff;
+  padding: 1em 2em;
+  border: none;
+  font-weight: bold;
+  font-size: 1em;
+  border-radius: 0.4em;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+.register__button:hover {
+  background: #4e0eff;
+}
+.register__login {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 0.3em;
+  align-items: center;
+}
+.register__span {
+  color: #fff;
+}
+.register__link {
+  color: #4e0eff;
+  text-transform: none;
+}
+.register__link:hover {
+  color: #997af0;
+}
+
+.avatar {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  gap: 3em;
+  align-items: center;
+  background: #131324;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  font-size: 1.3em;
+}
+.avatar__h1 {
+  font-size: 1.5em;
+  color: #fff;
+}
+.avatar__div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 2em;
+  align-items: center;
+}
+.avatar__profil {
+  border: 0.4em solid transparent;
+  padding: 0.4em;
+  height: 5em;
+  width: 5em;
+  border-radius: 50%;
+  background: #4e0eff;
+}
+.avatar__img {
+  height: 5em;
+  width: 5em;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.avatar__selected {
+  border-radius: 60%;
+  border: 0.4em solid #997af0;
+}
+
+.chat {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  gap: 1em;
+  align-items: center;
+  background: #131324;
+}
+.chat__container {
+  height: 85vh;
+  width: 85vw;
+  background: rgba(0, 0, 0, 0.462745098);
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+@media (max-width: 1000px) {
+  .chat__container {
+    grid-template-columns: 35% 65%;
+  }
+}
+
+.contact__container {
+  display: grid;
+  grid-template-rows: 10% 75% 15%;
+  overflow: hidden;
+  background: #080420;
+  height: 100%;
+}
+.contact__brand {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 1em;
+  align-items: center;
+  height: 3em;
+}
+.contact__img {
+  height: 3em;
+  width: 3em;
+}
+.contact__h3 {
+  color: #fff;
+  text-transform: uppercase;
+}
+.contact__left {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  gap: 0.8em;
+  align-items: center;
+  overflow-y: auto;
+  max-height: calc(100% - 10em);
+}
+.contact__left::-webkit-scrollbar {
+  width: 0.2em;
+}
+.contact__key {
+  width: 100%;
+}
+.contact__contact {
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  gap: 0.3em;
+  align-content: center;
+  background: rgba(255, 255, 255, 0.2235294118);
+  border-radius: 2em;
+  padding: 0.5em;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.contact__contact:hover {
+  background: #997af0;
+}
+.contact__contact:focus {
+  background: #4e0eff;
+}
+.contact__username {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 0.8em;
+  align-items: center;
+  text-align: center;
+}
+.contact__avatar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 0;
+  align-content: center;
+}
+.contact__img-avatar {
+  width: 4em;
+  height: 4em;
+}
+.contact__currentuser {
+  margin: 1em 0 0 0;
+  background: rgba(238, 238, 238, 0.462745098);
+  padding: 0.3em 1em;
+  border-radius: 2em;
+  height: 7em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 0.3em;
+  align-content: center;
+}
+.contact__user-avatar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 0.3em;
+  align-content: center;
+}
+.contact__users {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 0.3em;
+  align-content: center;
+}
+.contact__userimage {
+  width: 5em;
+  height: 5em;
+}
+
+.welcome {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  gap: 0;
+  align-items: center;
+}
+.welcome__img {
+  height: 25em;
+  width: 25em;
+  margin: 0;
+  padding: 0;
+}
+.welcome__span {
+  color: #4e0eff;
+  text-transform: uppercase;
+}
+.welcome__h1 {
+  text-transform: uppercase;
+  font-size: 2em;
+}
+.welcome__h3 {
+  text-transform: uppercase;
+  font-size: 1.3em;
+}
+
+.chatcontainer {
+  padding: 1em 0 0 0;
+}
+.chatcontainer__container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  gap: 0;
+  align-items: center;
+  padding: 0 2em;
+}
+.chatcontainer__details {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  gap: 1em;
+  align-items: center;
+}
+.chatcontainer__avatar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 1em;
+  align-items: center;
+}
+.chatcontainer__map {
+  height: 70vh;
+  overflow: auto;
+}
+.chatcontainer__key {
+  justify-content: flex-end;
+}
+.chatcontainer__containermap {
+  overflow-wrap: break-word;
+  color: rgba(209, 209, 209, 0.8196078431);
+  font-size: 1.1em;
+  border-radius: 1em;
+}
+.chatcontainer .sended {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  gap: 0;
+  align-items: flex-end;
+  width: 100%;
+}
+.chatcontainer .received {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  gap: 0;
+  align-items: flex-start;
+}
+.chatcontainer__p {
+  background: #4e0eff;
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  margin: 0.1em;
+}
+
+.p__sended {
+  background: #4e0eff;
+}
+
+.p__received {
+  background: #997af0;
+}
+
+.logout {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 0;
+  align-items: center;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  background: #997af0;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.logout:hover {
+  transform: scale(1.1);
+}
+
+svg {
+  font: size 1.3em;
+  color: #ebe7ff;
+}
+
+.messages {
+  height: 78%;
+}
+
+.input {
+  width: 100%;
+}
+.input__button {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 0.3em;
+  align-content: center;
+}
+.input__container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 0.3em;
+  align-content: center;
+}
+.input__emoji {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 0.3em;
+  align-content: center;
+}
+.input__input {
+  width: 80%;
+  border-radius: 2em;
+  background: rgba(255, 255, 255, 0.5647058824);
+  border: 0.1em solid #fff;
+  padding: 0 1em;
+}
+.input__submit {
+  width: 2em;
+  background: #997af0;
+  height: 2em;
+  border-radius: 50%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 0.3em;
+  align-content: center;
+}
+
+/*# sourceMappingURL=main.css.map */

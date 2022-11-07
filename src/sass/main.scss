@@ -1,0 +1,325 @@
+@import './imports/font.scss', './imports/reset.scss', './imports/mixins.scss',
+  './imports/variables.scss';
+.app {
+  background-color: $back-oficial;
+  color: $white-title;
+}
+.register {
+  @include flex(column, nowrap, center, center, 0.5em);
+  min-height: 100vh;
+  min-width: 100vw;
+  font-family: 'Josefin Sans';
+  background: $back-register;
+  &__form {
+    @include flex(column, nowrap, center, center, 1.2em);
+    background: #00000076;
+    padding: 3em 4em;
+    width: 26em;
+    border-radius: 2em;
+  }
+  &__div {
+    @include flex(row, wrap, center, center, 0.3em);
+  }
+  &__img {
+    height: 5em;
+    width: 5.5em;
+  }
+  &__h1 {
+    text-transform: uppercase;
+    color: $white-title;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+  }
+  &__input {
+    background: transparent;
+    padding: 1em;
+    border: 0.1em solid $input-border;
+    border-radius: 0.4em;
+    color: $white-title;
+    width: 100%;
+    font-size: 1em;
+    &:focus {
+      border: 0.1em solid $input-focus;
+      outline: none;
+    }
+    &::placeholder {
+      color: $white-title;
+    }
+  }
+  &__button {
+    background: $input-focus;
+    color: $white-title;
+    padding: 1em 2em;
+    border: none;
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 0.4em;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+    &:hover {
+      background: $input-border;
+    }
+  }
+  &__login {
+    @include flex(row, nowrap, center, center, 0.3em);
+  }
+  &__span {
+    color: $white-title;
+  }
+  &__link {
+    color: $input-border;
+    text-transform: none;
+    &:hover {
+      color: $input-focus;
+    }
+  }
+}
+.avatar {
+  @include flex(column, nowrap, center, center, 3em);
+  background: $back-register;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  font-size: 1.3em;
+  &__container {
+  }
+  &__h1 {
+    font-size: 1.5em;
+    color: $white-title;
+  }
+  &__div {
+    @include flex(row, nowrap, center, center, 2em);
+  }
+  &__profil {
+    border: 0.4em solid transparent;
+    padding: 0.4em;
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+    background: $input-border;
+  }
+  &__img {
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+  &__selected {
+    border-radius: 60%;
+    // background: red;
+    border: 0.4em solid $input-focus;
+  }
+}
+.chat {
+  height: 100vh;
+  width: 100vw;
+  @include flex(column, nowrap, center, center, 1em);
+  background: $black-chat;
+  &__container {
+    height: 85vh;
+    width: 85vw;
+    background: $black-forte;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    @include mv(1000px) {
+      grid-template-columns: 35% 65%;
+    }
+  }
+}
+.contact {
+  &__container {
+    display: grid;
+    grid-template-rows: 10% 75% 15%;
+    overflow: hidden;
+    background: #080420;
+    height: 100%;
+  }
+  &__brand {
+    @include flex(row, nowrap, center, center, 1em);
+    height: 3em;
+  }
+  &__img {
+    height: 3em;
+    width: 3em;
+  }
+  &__h3 {
+    color: $white-title;
+    text-transform: uppercase;
+  }
+  &__left {
+    @include flex(column, nowrap, center, center, 0.8em);
+    overflow-y: auto;
+    max-height: calc(100% - 10em);
+    &::-webkit-scrollbar {
+      width: 0.2em;
+    }
+  }
+  &__key {
+    width: 100%;
+  }
+  &__contact {
+    height: 100%;
+    @include flex(row, wrap, space-around, center, 0.3em);
+    background: #ffffff39;
+    border-radius: 2em;
+    padding: 0.5em;
+    transition: 0.5s ease;
+    cursor: pointer;
+    &:hover {
+      background: $input-focus;
+    }
+    &:focus {
+      background: $input-border;
+    }
+  }
+  &__username {
+    @include flex(row, nowrap, center, center, 0.8em);
+    text-align: center;
+  }
+  &__avatar {
+    @include flex(row, wrap, center, center, 0);
+  }
+  &__img-avatar {
+    width: 4em;
+    height: 4em;
+  }
+  &__currentuser {
+    margin: 1em 0 0 0;
+    background: #eeeeee76;
+    padding: 0.3em 1em;
+    border-radius: 2em;
+    height: 7em;
+    @include flex(row, wrap, center, center, 0.3em);
+  }
+  &__user-avatar {
+    @include flex(row, wrap, center, center, 0.3em);
+  }
+  &__users {
+    @include flex(row, wrap, center, center, 0.3em);
+  }
+  &__userimage {
+    width: 5em;
+    height: 5em;
+  }
+}
+.welcome {
+  @include flex(column, nowrap, center, center, 0);
+  &__img {
+    height: 25em;
+    width: 25em;
+    margin: 0;
+    padding: 0;
+  }
+  &__span {
+    color: $input-border;
+    text-transform: uppercase;
+    // font-size: 1.3em;
+  }
+  &__h1 {
+    text-transform: uppercase;
+    font-size: 2em;
+  }
+  &__h3 {
+    text-transform: uppercase;
+    font-size: 1.3em;
+  }
+}
+.chatcontainer {
+  padding: 1em 0 0 0;
+  &__container {
+    @include flex(row, nowrap, space-between, center, 0);
+    padding: 0 2em;
+  }
+  &__details {
+    width: 100%;
+    @include flex(row, nowrap, space-between, center, 1em);
+  }
+  &__avatar {
+    @include flex(row, nowrap, center, center, 1em);
+  }
+
+  &__map {
+    height: 70vh;
+    overflow: auto;
+  }
+
+  &__key {
+    justify-content: flex-end;
+  }
+  &__containermap {
+    overflow-wrap: break-word;
+    color: #d1d1d1d1;
+    font-size: 1.1em;
+    border-radius: 1em;
+  }
+  .sended {
+    @include flex(row, nowrap, flex-end, flex-end, 0);
+    width: 100%;
+  }
+  .received {
+    @include flex(row, nowrap, flex-start, flex-start, 0);
+    // background: $input-focus;
+  }
+  &__p {
+    background: $input-border;
+    padding: 0.5em 1em;
+    border-radius: 2em;
+    margin: 0.1em;
+    // text-align: right;
+  }
+}
+.p__sended {
+  background: $input-border;
+}
+.p__received {
+  background: $input-focus;
+}
+.logout {
+  @include flex(row, nowrap, center, center, 0);
+  padding: 0.5em;
+  border-radius: 0.5em;
+  background: $input-focus;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+svg {
+  font: size 1.3em;
+  color: #ebe7ff;
+}
+.messages {
+  height: 78%;
+}
+.input {
+  width: 100%;
+  &__button {
+    @include flex(row, wrap, center, center, 0.3em);
+  }
+  &__container {
+    width: 100%;
+    @include flex(row, wrap, center, center, 0.3em);
+  }
+  &__emoji {
+    @include flex(row, wrap, center, center, 0.3em);
+  }
+  &__input {
+    width: 80%;
+    border-radius: 2em;
+    background: #ffffff90;
+    border: 0.1em solid #fff;
+    padding: 0 1em;
+  }
+  &__submit {
+    width: 2em;
+    background: $input-focus;
+    height: 2em;
+    border-radius: 50%;
+    @include flex(row, wrap, center, center, 0.3em);
+  }
+}
